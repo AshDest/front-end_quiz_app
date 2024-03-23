@@ -58,6 +58,11 @@ function showQuestion() {
         button.addEventListener("click", () => selectAnswer(answer.correct));
         answerButtonsElement.appendChild(button);
     });
+
+    // Mise à jour de la barre de progression
+    const progressBar = document.getElementById("progress-bar");
+    const progressPercentage = ((currentQuestionIndex + 1) / quizData.length) * 100;
+    progressBar.style.width = progressPercentage + "%";
 }
 
 function selectAnswer(correct) {
