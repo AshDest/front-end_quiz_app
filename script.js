@@ -38,6 +38,7 @@ const quizData = [
 ];
 
 let currentQuestionIndex = 0;
+let score = 0;
 
 const questionTextElement = document.getElementById("question-text");
 const answerButtonsElement = document.getElementById("answer-buttons");
@@ -65,23 +66,34 @@ function showQuestion() {
     progressBar.style.width = progressPercentage + "%";
 }
 
+function showAlert(message) {
+    const alertContainer = document.getElementById("alert-container");
+    alertContainer.innerText = message;
+    alertContainer.style.display = "block";
+
+    // Masquer l'alerte après 3 secondes (3000 millisecondes)
+    setTimeout(() => {
+        alertContainer.style.display = "none";
+    }, 3000);
+}
+
 function selectAnswer(correct) {
     if (correct) {
         alert("Correct!");
-        currentQuestionIndex++;
-        if (currentQuestionIndex < quizData.length) {
-            showQuestion();
-        } else {
-            finishQuiz();
-        }
+        score++;
     } else {
         alert("Wrong!");
-
+    }
+    currentQuestionIndex++;
+    if (currentQuestionIndex < quizData.length) {
+        showQuestion();
+    } else {
+        finishQuiz();
     }
 }
 
 function finishQuiz() {
-    alert("Quiz Finished!");
+    alert("Quiz Finished! Your score is: " + score + "/" + quizData.length);
     currentQuestionIndex = 0;
     showQuestion();
 }
