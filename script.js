@@ -1,23 +1,5 @@
 const quizData = [
     {
-        question: "What is the capital of France?",
-        answers: [
-            { text: "Paris", correct: true },
-            { text: "London", correct: false },
-            { text: "Berlin", correct: false },
-            { text: "Madrid", correct: false }
-        ]
-    },
-    {
-        question: "What is 2 + 2?",
-        answers: [
-            { text: "3", correct: false },
-            { text: "4", correct: true },
-            { text: "5", correct: false },
-            { text: "6", correct: false }
-        ]
-    },
-    {
         question: "What is the difference between html and css?",
         answers: [
             { text: "html is for content, css is for style", correct: true },
@@ -80,6 +62,51 @@ const quizData = [
             { text: "A conditional statement is a block of code that is executed multiple times, a loop is a block of code that is executed if a condition is true", correct: false }
         ]
     },
+    {
+        question: "What is the difference between a for loop and a while loop?",
+        answers: [
+            { text: "A for loop is a loop that is executed while a condition is true, a while loop is a loop that is executed a specific number of times", correct: false },
+            { text: "A while loop is a loop that is executed while a condition is true, a for loop is a loop that is executed a specific number of times", correct: true },
+            { text: "A for loop is a loop that is executed a specific number of times, a while loop is a loop that is executed while a condition is true", correct: false },
+            { text: "A while loop is a loop that is executed a specific number of times, a for loop is a loop that is executed while a condition is true", correct: false }
+        ]
+    },
+    {
+        question: "What is the difference between a break statement and a continue statement?",
+        answers: [
+            { text: "A break statement is a statement that is executed if a condition is true, a continue statement is a statement that is executed if a condition is false", correct: false },
+            { text: "A continue statement is a statement that is executed if a condition is true, a break statement is a statement that is executed if a condition is false", correct: false },
+            { text: "A break statement is a statement that is executed if a condition is true, a continue statement is a statement that is executed if a condition is false", correct: true },
+            { text: "A continue statement is a statement that is executed if a condition is true, a break statement is a statement that is executed if a condition is false", correct: false }
+        ]
+    },
+    {
+        question: "What is the difference between a return statement and a throw statement?",
+        answers: [
+            { text: "A return statement is a statement that is executed if a condition is true, a throw statement is a statement that is executed if a condition is false", correct: false },
+            { text: "A throw statement is a statement that is executed if a condition is true, a return statement is a statement that is executed if a condition is false", correct: false },
+            { text: "A return statement is a statement that is executed if a condition is true, a throw statement is a statement that is executed if a condition is false", correct: true },
+            { text: "A throw statement is a statement that is executed if a condition is true, a return statement is a statement that is executed if a condition is false", correct: false }
+        ]
+    },
+    {
+        question: "What is the difference between a try statement and a catch statement?",
+        answers: [
+            { text: "A try statement is a statement that is executed if a condition is true, a catch statement is a statement that is executed if a condition is false", correct: false },
+            { text: "A catch statement is a statement that is executed if a condition is true, a try statement is a statement that is executed if a condition is false", correct: false },
+            { text: "A try statement is a statement that is executed if a condition is true, a catch statement is a statement that is executed if a condition is false", correct: true },
+            { text: "A catch statement is a statement that is executed if a condition is true, a try statement is a statement that is executed if a condition is false", correct: false }
+        ]
+    },
+    {
+        question: "What is the difference between a finally statement and a throw statement?",
+        answers: [
+            { text: "A finally statement is a statement that is executed if a condition is true, a throw statement is a statement that is executed if a condition is false", correct: false },
+            { text: "A throw statement is a statement that is executed if a condition is true, a finally statement is a statement that is executed if a condition is false", correct: false },
+            { text: "A finally statement is a statement that is executed if a condition is true, a throw statement is a statement that is executed if a condition is false", correct: false },
+            { text: "A throw statement is a statement that is executed if a condition is true, a finally statement is a statement that is executed if a condition is false", correct: false }
+        ]       
+    }
 ];
 
 let currentQuestionIndex = 0;
