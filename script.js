@@ -11,8 +11,8 @@ const quizData = [
     {
         question: "Which CSS property is used to define the text color?",
         answers: [
-            { text: "color", correct: true },
             { text: "font-color", correct: false },
+            { text: "color", correct: true },
             { text: "text-color", correct: false },
             { text: "font-style", correct: false },
         ],
@@ -20,28 +20,28 @@ const quizData = [
     {
         question: "Which HTML tag is used to create a hyperlink?",
         answers: [
-            { text: "<a>", correct: true },
             { text: "<link>", correct: false },
             { text: "<href>", correct: false },
             { text: "<url>", correct: false },
+            { text: "<a>", correct: true },
         ],
     },
     {
         question: "Which JavaScript method is used to add an element to the end of an array?",
         answers: [
-            { text: "push()", correct: true },
             { text: "unshift()", correct: false },
             { text: "add()", correct: false },
+            { text: "push()", correct: true },
             { text: "append()", correct: false },
         ],
     },
     {
         question: "Which CSS rule allows you to horizontally center an element within its container?",
         answers: [
-            { text: "margin: auto;", correct: true },
             { text: "text-align: center;", correct: false },
             { text: "position: center;", correct: false },
             { text: "margin: center;", correct: false },
+            { text: "margin: auto;", correct: true },
         ],
     },
 ];
@@ -75,9 +75,11 @@ function showQuestion() {
     progressBar.style.width = progressPercentage + "%";
 }
 
-function showAlert(message) {
+function showAlert(message, isCorrect) {
     const alertContainer = document.getElementById("alert-container");
     alertContainer.innerText = message;
+    alertContainer.classList.remove("alert-correct", "alert-incorrect");
+    alertContainer.classList.add(isCorrect ? "alert-correct" : "alert-incorrect");
     alertContainer.style.display = "block";
 
     // Masquer l'alerte après 3 secondes (3000 millisecondes)
@@ -88,10 +90,10 @@ function showAlert(message) {
 
 function selectAnswer(correct) {
     if (correct) {
-        showAlert("Correct!");
+        showAlert("Correct!", true);
         score++;
     } else {
-        showAlert("Wrong!");
+        showAlert("Wrong!", false);
     }
     currentQuestionIndex++;
     if (currentQuestionIndex < quizData.length) {

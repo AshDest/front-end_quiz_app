@@ -6,7 +6,8 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #0a2538; /* Bleu foncé */
+    background-color: #0a2538;
+    /* Bleu foncé */
 }
 
 /* .container {
@@ -22,11 +23,13 @@ body {
     text-align: center;
     background-color: #fff;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 500px; /* Largeur fixe */
-    height: 600px; /* Hauteur fixe */
-    overflow: auto; /* Ajout d'un défilement si le contenu dépasse la taille de la fenêtre */
+    width: 500px;
+    /* Largeur fixe */
+    height: auto;
+    /* Hauteur fixe */
+    overflow: auto;
 }
 
 h1 {
@@ -99,18 +102,22 @@ h1 {
     left: 50%;
     transform: translateX(-50%);
     z-index: 9999;
-    width: 300px; /* Largeur de l'alerte */
+    width: 300px;
+    /* Largeur de l'alerte */
     padding: 10px;
-    background-color: rgba(255, 0, 0, 0.8); /* Couleur de fond de l'alerte */
-    color: #fff; /* Couleur du texte de l'alerte */
+    background-color: rgba(255, 0, 0, 0.8);
+    /* Couleur de fond de l'alerte */
+    color: #fff;
+    /* Couleur du texte de l'alerte */
     text-align: center;
     border-radius: 8px;
-    display: none; /* Caché initialement */
+    display: none;
+    /* Caché initialement */
 }
 
 .quiz-end-message {
     position: fixed;
-    top: 50%;
+    top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 9999;
@@ -129,4 +136,14 @@ h1 {
 
 .hidden {
     display: none;
+}
+
+.alert-correct {
+    background-color: rgba(0, 255, 0, 0.8);
+    /* Vert */
+}
+
+.alert-incorrect {
+    background-color: rgba(255, 0, 0, 0.8);
+    /* Rouge */
 }
