@@ -34,7 +34,7 @@ This is a small challenge learning application designed for frontend developers.
 
 ### Screenshots
 
-![Quiz App Screenshot](/path/to/screen.png)
+![Quiz App Screenshot](screenshot/screen.png)
 
 ### License
 
